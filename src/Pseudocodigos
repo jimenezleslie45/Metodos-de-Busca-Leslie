@@ -1,0 +1,24 @@
+ALGORITMO BúsquedaBinaria(elemento, datos)
+    inicio = 0
+    fin = longitud(datos) - 1
+
+    mientras inicio <= fin
+        medio = (inicio + fin) / 2
+
+        si datos[medio] == elemento
+            devolver medio
+        sino si datos[medio] < elemento
+            inicio = medio + 1
+        sino
+            fin = medio - 1
+
+    devolver -1  // Si no se encuentra el elemento
+FIN ALGORITMO
+
+ALGORITMO BúsquedaSecuencial(elemento, datos)
+    para cada índice desde 0 hasta longitud(datos) - 1
+        si datos[índice] == elemento
+            devolver índice
+
+    devolver -1  // Si no se encuentra el elemento
+FIN ALGORITMO
